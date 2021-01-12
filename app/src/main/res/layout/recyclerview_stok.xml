@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+    <TextView
+        android:id="@+id/namaBarang"
+        style="@style/LabelTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        tools:text="Smartphone"
+        app:layout_constraintBottom_toTopOf="@+id/merkBarang"
+        app:layout_constraintStart_toStartOf="@+id/merkBarang"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/merkBarang"
+        style="@style/LabelTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        tools:text="Samsung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namaBarang" />
+
+    <TextView
+        android:id="@+id/ketBarang"
+        style="@style/LabelTextView"
+        android:layout_marginEnd="16dp"
+        tools:text="Hape"
+        app:layout_constraintBottom_toBottomOf="@+id/merkBarang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/namaBarang" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

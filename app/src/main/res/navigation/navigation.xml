@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mibrahimuadev.cikasodevelopertest.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_stokFragment"
+            app:destination="@id/stokFragment"
+            app:popUpTo="@id/stokFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/stokFragment"
+        android:name="com.mibrahimuadev.cikasodevelopertest.ui.barang.StokFragment"
+        android:label="fragment_stok"
+        tools:layout="@layout/fragment_stok" >
+        <action
+            android:id="@+id/action_stokFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_stokFragment_to_addEditStokFragment"
+            app:destination="@id/addEditStokFragment"
+            app:popUpTo="@id/addEditStokFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditStokFragment"
+        android:name="com.mibrahimuadev.cikasodevelopertest.ui.barang.AddEditStokFragment"
+        android:label="fragment_add_edit_stok"
+        tools:layout="@layout/fragment_add_edit_stok" >
+        <action
+            android:id="@+id/action_addEditStokFragment_to_stokFragment"
+            app:destination="@id/stokFragment"
+            app:popUpTo="@id/stokFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="idBarang"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
